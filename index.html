@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="عالم ألعاب البلايستيشن — دليل ألعاب PS1 وPS2 وPS3 وPS4 وPS5 ومحتوى مرخّص للاعبين.">
+  <title>عالم ألعاب البلايستيشن | ألعابك في مكان واحد</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#" aria-label="الصفحة الرئيسية"><span class="brand-mark">▶</span><span>عالم <b>البلايستيشن</b><small>PLAY • DISCOVER • PLAY</small></span></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة">☰</button>
+  <nav id="mainNav">
+    <a href="#games">الألعاب</a><a href="#platforms">الأجهزة</a><a href="#free">مجاني</a><a href="#paid">المتجر</a><a href="#about">عن الموقع</a>
+  </nav>
+  <a class="header-cta" href="#paid">تصفّح المتجر ↗</a>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <div class="eyebrow"><span class="pulse"></span> وجهتك لعالم الألعاب</div>
+      <h1>اللعبة الجاية؟<br><span>حتلقاها هنا.</span></h1>
+      <p>اكتشف ألعاب البلايستيشن، اقرأ التفاصيل، واعثر على المحتوى المجاني والمنتجات الرقمية المرخّصة في مكان واحد.</p>
+      <div class="hero-actions"><a class="btn primary" href="#games">اكتشف الألعاب <span>←</span></a><a class="btn ghost" href="#platforms">اختار جهازك</a></div>
+      <div class="hero-stats"><div><b>PS1—PS5</b><small>أجيال متعددة</small></div><div><b>عربي</b><small>واجهة سهلة</small></div><div><b>متجدد</b><small>أضف ألعابك باستمرار</small></div></div>
+    </div>
+    <div class="hero-art" aria-label="تصميم تجريدي لعالم الألعاب">
+      <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+      <div class="console"><div class="console-top"><span></span><span></span></div><div class="console-front"><i></i><i></i><i></i><i></i></div></div>
+      <div class="floating-chip chip-one">PS2</div><div class="floating-chip chip-two">GAME ON</div><div class="floating-chip chip-three">🎮</div>
+      <div class="glow"></div>
+    </div>
+  </section>
+
+  <section class="ad-banner" aria-label="مساحة إعلانية">
+    <div><span class="ad-label">مساحة إعلانية</span><b>مكان إعلانك هنا</b><small>اربط هذه المساحة بشبكة إعلانات بعد قبول موقعك.</small></div>
+    <span class="ad-size">RESPONSIVE AD SLOT</span>
+  </section>
+
+  <section class="section" id="platforms">
+    <div class="section-heading"><div><span class="eyebrow">اختار الجيل</span><h2>تصفّح حسب الجهاز</h2></div><p>من الكلاسيكيات إلى أحدث الأجيال.</p></div>
+    <div class="platform-grid">
+      <button class="platform active" data-platform="الكل"><span class="platform-icon">🎮</span><b>كل الأجهزة</b><small>كل المكتبة</small></button>
+      <button class="platform" data-platform="PS1"><span class="platform-icon">🕹️</span><b>PlayStation 1</b><small>ألعاب كلاسيكية</small></button>
+      <button class="platform" data-platform="PS2"><span class="platform-icon">🎮</span><b>PlayStation 2</b><small>جيل الذكريات</small></button>
+      <button class="platform" data-platform="PS3"><span class="platform-icon">🎯</span><b>PlayStation 3</b><small>أكشن ومغامرات</small></button>
+      <button class="platform" data-platform="PS4"><span class="platform-icon">⚡</span><b>PlayStation 4</b><small>ألعاب حديثة</small></button>
+      <button class="platform" data-platform="PS5"><span class="platform-icon">🚀</span><b>PlayStation 5</b><small>الجيل الجديد</small></button>
+    </div>
+  </section>
+
+  <section class="section" id="games">
+    <div class="section-heading"><div><span class="eyebrow">مكتبة الألعاب</span><h2>اعثر على لعبتك</h2></div><span class="result-count" id="resultCount">6 عناصر</span></div>
+    <div class="filters">
+      <label class="searchbox"><span>⌕</span><input id="searchInput" type="search" placeholder="ابحث باسم اللعبة أو النوع..." aria-label="ابحث عن لعبة"></label>
+      <select id="typeFilter" aria-label="تصفية حسب النوع"><option value="الكل">كل الأنواع</option><option>سباق</option><option>رياضة</option><option>أكشن</option><option>مغامرات</option><option>أدوات</option></select>
+      <select id="accessFilter" aria-label="تصفية حسب طريقة الوصول"><option value="الكل">مجاني ومدفوع</option><option value="مجاني">مجاني</option><option value="مدفوع">مدفوع</option></select>
+    </div>
+    <div class="games-grid" id="gamesGrid"></div>
+    <div class="empty-state" id="emptyState" hidden>ما لقينا نتيجة مطابقة. جرّب اسم أو تصنيف مختلف.</div>
+  </section>
+
+  <section class="split-section" id="free">
+    <div class="split-copy"><span class="eyebrow">محتوى مجاني</span><h2>العب بذكاء.<br><span>حمّل بأمان.</span></h2><p>خصص هذا القسم للألعاب التجريبية، والألعاب مفتوحة المصدر، والملفات التي تملك حق توزيعها. لا ترفع نسخ ألعاب محمية بحقوق النشر دون إذن.</p><a href="#games" class="text-link" id="freeLink">شوف المحتوى المجاني ←</a></div>
+    <div class="download-card"><div class="download-icon">↓</div><div><b>مركز التنزيلات</b><p>روابط مباشرة للمحتوى المرخّص، مع وصف ومتطلبات التشغيل.</p><div class="progress"><span></span></div><small>روابط تنزيلك تُضاف من ملف البيانات</small></div></div>
+  </section>
+
+  <section class="section paid-section" id="paid">
+    <div class="section-heading"><div><span class="eyebrow">متجر رقمي</span><h2>قسم المنتجات المدفوعة</h2></div><span class="currency">العملة المعروضة: جنيه سوداني (SDG)</span></div>
+    <div class="paid-note"><span>💳</span><div><b>جاهز لإضافة البيع</b><p>الأسعار هنا توضيحية. قبل استقبال الأموال، اربط بوابة دفع متاحة في السودان أو وسيلة دفع محلية موثوقة، وأضف تأكيد الطلب وتسليم المنتج تلقائياً.</p></div></div>
+  </section>
+
+  <section class="newsletter" id="about">
+    <div><span class="eyebrow">ابقَ على اطلاع</span><h2>جديد الألعاب أول بأول</h2><p>هذا نموذج واجهة فقط؛ اربطه بخدمة بريد أو واتساب بموافقة الزائر قبل جمع بياناته.</p></div>
+    <form id="newsletterForm"><input id="emailInput" type="email" placeholder="بريدك الإلكتروني" aria-label="البريد الإلكتروني" required><button class="btn primary" type="submit">سجّل اهتمامك</button><small id="formMessage" role="status"></small></form>
+  </section>
+</main>
+<footer>
+  <a class="brand footer-brand" href="#"><span class="brand-mark">▶</span><span>عالم <b>البلايستيشن</b><small>PLAY • DISCOVER • PLAY</small></span></a>
+  <p>موقع مستقل لمحبي الألعاب، وليس تابعاً لشركة Sony أو PlayStation.</p>
+  <div class="footer-links"><a href="#about">عن الموقع</a><a href="#games">الألعاب</a><a href="README.txt">دليل الإعداد</a></div>
+  <small>© <span id="year"></span> عالم البلايستيشن. جميع الحقوق محفوظة لأصحابها.</small>
+</footer>
+<div class="toast" id="toast" role="status"></div>
+<script src="games.js"></script><script src="app.js"></script>
+</body>
+</html>
