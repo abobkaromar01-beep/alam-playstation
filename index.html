@@ -1,53 +1,82 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Alam PlayStation - عالم البلايستيشن | Global Store</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Alam TopUp - بنكك 2505206 بكري عمر</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;900&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap');
-:root{--bg:#070a1a;--card:#111735;--card2:#171e42;--line:#23306a;--cyan:#2cf5d4;--text:#eef2ff;--muted:#9aa3c7}
-*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Cairo',system-ui;background:var(--bg);color:var(--text)}
-.header{position:sticky;top:0;z-index:99;background:rgba(7,10,26,.9);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;padding:12px 20px}
-.logo{font-weight:900;display:flex;gap:10px;align-items:center}.logo span{background:var(--cyan);color:#000;padding:6px 10px;border-radius:10px}
-.lang{border:1px solid var(--line);padding:8px 14px;border-radius:999px;background:var(--card);cursor:pointer;font-weight:700}
-.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;padding:36px 20px;max-width:1200px;margin:auto}
-.hero h1{font-size:42px;line-height:1.1;font-weight:900}.hero h1 i{color:var(--cyan);font-style:normal}.hero p{color:var(--muted);margin:16px 0}
-.btn{padding:14px 22px;border-radius:12px;font-weight:800;border:0;cursor:pointer}.btn-primary{background:var(--cyan);color:#000}.btn-ghost{background:var(--card);border:1px solid var(--line);color:var(--text)}
-.hero-card{background:radial-gradient(120% 120% at 20% 0%,#24307a 0%,var(--card) 55%);border:1px solid var(--line);border-radius:24px;padding:18px}
-.filters{max-width:1200px;margin:auto;padding:0 20px;display:flex;gap:10px;overflow:auto}.chip{white-space:nowrap;padding:10px 16px;border-radius:999px;background:var(--card);border:1px solid var(--line);color:var(--muted);cursor:pointer;font-weight:700}.chip.active{background:var(--cyan);color:#000}
-.searchbar{max-width:1200px;margin:16px auto;padding:0 20px}.searchbar input{width:100%;padding:16px;border-radius:14px;background:var(--card);border:1px solid var(--line);color:var(--text);font-size:16px}
-.grid{max-width:1200px;margin:0 auto;padding:20px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-@media(max-width:1024px){.grid{grid-template-columns:repeat(3,1fr)}.hero{grid-template-columns:1fr}}@media(max-width:640px){.grid{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:28px}}
-.product{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:.2s;cursor:pointer}.product:hover{transform:translateY(-4px);border-color:var(--cyan)}.thumb{height:150px;background:var(--card2);display:flex;align-items:center;justify-content:center;font-size:50px}.info{padding:14px}.info h3{font-size:14px;min-height:36px}.price{color:var(--cyan);font-weight:900}.meta{color:var(--muted);font-size:12px}.product button{margin:12px;padding:12px;border-radius:12px;border:0;background:#fff;color:#000;font-weight:900;width:calc(100% - 24px)}
-.modal{position:fixed;inset:0;background:rgba(0,0,0,.8);display:none;align-items:center;justify-content:center;padding:20px;z-index:200}.modal.open{display:flex}.modal-box{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--cyan);border-radius:24px;max-width:520px;width:100%;padding:22px}.wa{display:block;margin-top:16px;background:#25D366;color:#000;text-align:center;padding:14px;border-radius:12px;font-weight:900;text-decoration:none}
+:root{--bg:#060a1f;--card:#121937;--card2:#1a2350;--line:#24307a;--cyan:#2df6d3;--text:#eef2ff;--muted:#9aa3c7}
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--text)}
+.top{position:sticky;top:0;z-index:10;background:rgba(6,10,31,.95);border-bottom:1px solid var(--line);padding:12px 18px;display:flex;justify-content:space-between}
+.logo{font-weight:900;display:flex;gap:8px}.logo span{background:var(--cyan);color:#000;padding:6px 12px;border-radius:10px}
+.hero{max-width:1100px;margin:auto;padding:22px 16px;display:grid;grid-template-columns:1.2fr.8fr;gap:16px}
+@media(max-width:800px){.hero{grid-template-columns:1fr}}
+.card{background:linear-gradient(135deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:18px;padding:16px}
+.bank{background:#fff;color:#111;border-radius:14px;padding:12px;margin-top:10px;font-weight:900}
+.bank b{color:#c00}.grid{max-width:1100px;margin:auto;padding:16px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}}
+.g{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;cursor:pointer}
+.g:hover{border-color:var(--cyan);transform:translateY(-2px)}
+.g.ico{height:90px;background:var(--card2);display:flex;align-items:center;justify-content:center;font-size:42px}
+.g.inf{padding:10px}.g h3{font-size:13px}.g p{font-size:11px;color:var(--muted)}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;padding:14px;z-index:99}.modal.open{display:flex}
+.box{background:var(--card);border:1px solid var(--cyan);border-radius:20px;max-width:440px;width:100%;padding:18px}
+.opt{display:flex;justify-content:space-between;background:#070c26;border:1px solid var(--line);border-radius:10px;padding:10px;margin:7px 0;cursor:pointer;font-size:13px}.opt.active{border-color:var(--cyan);background:#16205a}
+input{width:100%;padding:12px;border-radius:10px;background:#070c26;border:1px solid var(--line);color:#fff;margin:6px 0}
+.btn{width:100%;padding:13px;border-radius:11px;border:0;font-weight:900;background:var(--cyan);color:#000;cursor:pointer;margin-top:8px}
 </style>
 </head>
 <body>
-<header class="header"><div class="logo"><span>ALAM</span> عالم البلايستيشن 🎮</div><button class="lang" onclick="toggleLang()">EN</button></header>
-<section class="hero"><div><h1 id="h1">متجر الألعاب <i>رقم 1</i> في السودان والعالم</h1><p id="hp">أجهزة PS5, PS4, Xbox وألعاب أصلية - توصيل فوري أمدرمان وشحن عالمي</p><button class="btn btn-primary" onclick="document.getElementById('store').scrollIntoView({behavior:'smooth'})">🛒 تسوق الآن</button></div><div class="hero-card"><div style="font-size:80px;text-align:center">🎮</div><h3>PS5 Slim 1TB</h3><p style="color:var(--muted)">جديد + يدين + ضمان</p><p style="color:var(--cyan);font-weight:900;font-size:22px">450,000 SDG</p></div></section>
-<div class="searchbar"><input id="search" placeholder="ابحث: FIFA, GTA, PS5..." oninput="render()"></div>
-<div class="filters" id="filters"></div>
-<div class="grid" id="store"></div>
-<div class="modal" id="modal" onclick="closeM()"><div class="modal-box" onclick="event.stopPropagation()"><h2 id="mTitle"></h2><p id="mDesc" style="color:var(--muted);margin:10px 0"></p><p id="mPrice" style="color:var(--cyan);font-weight:900;font-size:20px"></p><a id="mWa" class="wa" target="_blank">اطلب واتساب 🟢</a><p style="text-align:center;color:var(--muted);margin-top:12px;cursor:pointer" onclick="closeM()">إغلاق</p></div></div>
+<div class="top"><div class="logo"><span>ALAM</span> TopUp</div><div style="font-size:11px;color:var(--muted)">بنكك • فوري</div></div>
+<div class="hero">
+<div>
+<h1 style="font-size:30px;font-weight:900">اشحن <span style="color:#2df6d3">أي لعبة</span> ببنكك في 60 ثانية ⚡</h1>
+<p style="color:#9aa3c7;font-size:13px;margin:10px 0">PUBG • Free Fire • PSN • Xbox • TikTok - دفع بنكك وتسليم فوري</p>
+<div class="card">
+<strong>🏦 حساب بنكك:</strong>
+<div class="bank">
+2505206 - بكري عمر<br>
+عالم البلايستيشن<br><small>في تعليق بنكك اكتب: شحن + اسم اللعبة</small><br><b>⚠️ صور الإشعار</b>
+</div>
+</div>
+</div>
+<div class="card">
+<h3>🔥 الأكثر طلباً</h3>
+<div style="margin-top:10px">
+<div class="opt active"><span>PUBG 660 UC</span><b>18,000 SDG</b></div>
+<div class="opt active"><span>Free Fire 1080 💎</span><b>16,500 SDG</b></div>
+<div class="opt active"><span>PSN $20</span><b>22,000 SDG</b></div>
+</div>
+<a href="https://wa.me/249125048800" style="display:block;text-align:center;margin-top:10px;color:#2df6d3;font-size:12px">واتساب: 0125048800</a>
+</div>
+</div>
+<div class="grid" id="grid"></div><div class="modal" id="modal"><div class="box">
+<h3 id="mt"></h3><p id="md" style="color:#9aa3c7;font-size:12px"></p>
+<div id="packs"></div>
+<label>🆔 ID اللاعب</label><input id="pid" placeholder="5123456789">
+<label>📱 واتسابك</label><input id="wnum" placeholder="0912345678">
+<div class="bank" id="bam">المبلغ: -</div>
+<button class="btn" onclick="send()">تأكيد - واتساب ✅</button>
+<p onclick="closeM()" style="text-align:center;color:#9aa3c7;font-size:12px;margin-top:10px">إغلاق</p>
+</div></div>
 <script>
-const products=[
-{name:{ar:'FIFA 25 PS5',en:'FIFA 25 PS5'},cat:'games',icon:'⚽',price:25000,desc:{ar:'آخر إصدار بكل الفرق',en:'Latest with updated teams'},stock:'متوفر'},
-{name:{ar:'GTA V Premium',en:'GTA V Premium'},cat:'games',icon:'🔫',price:18000,desc:{ar:'نسخة كاملة + أونلاين',en:'Full + online'},stock:'متوفر'},
-{name:{ar:'PS5 Slim 1TB',en:'PS5 Slim 1TB'},cat:'devices',icon:'🎮',price:450000,desc:{ar:'جديد كرتونة مقفلة يدين ضمان سنة',en:'Brand new sealed 2 controllers 1y warranty'},stock:'3 فقط'},
-{name:{ar:'يد PS4 أصلية',en:'PS4 Controller'},cat:'acc',icon:'🕹️',price:25000,desc:{ar:'أصلية 100%',en:'100% Original'},stock:'متوفر'},
-{name:{ar:'Call of Duty MW3',en:'COD MW3'},cat:'games',icon:'💣',price:30000,desc:{ar:'أكشن حربي',en:'War action'},stock:'متوفر'},
-{name:{ar:'سماعة RGB',en:'Gaming Headset'},cat:'acc',icon:'🎧',price:18000,desc:{ar:'محيطي + مايك',en:'Surround + mic'},stock:'متوفر'},
-{name:{ar:'PS Plus سنة',en:'PS Plus 1Y'},cat:'subs',icon:'⭐',price:35000,desc:{ar:'ألعاب مجانية',en:'Free monthly games'},stock:'فوري'},
-{name:{ar:'Xbox Series S',en:'Xbox Series S'},cat:'devices',icon:'📦',price:380000,desc:{ar:'جهاز اكس بوكس',en:'Xbox device'},stock:'متوفر'},
+const data=[
+{n:'PUBG Mobile',i:'🎯',d:'شدات PUBG',p:[{l:'60 UC',pr:2500},{l:'325 UC',pr:9500},{l:'660 UC',pr:18000},{l:'1800 UC',pr:45000}]},
+{n:'Free Fire',i:'🔥',d:'جواهر فري فاير',p:[{l:'100 💎',pr:2500},{l:'310 💎',pr:6500},{l:'1080 💎',pr:16500},{l:'2200 💎',pr:32000}]},
+{n:'PSN Cards',i:'⭐',d:'بطاقات بلايستيشن',p:[{l:'$10 PSN',pr:12000},{l:'$20 PSN',pr:22000},{l:'$50 PSN',pr:52000},{l:'$100 PSN',pr:98000}]},
+{n:'Xbox Gift',i:'🟩',d:'بطاقات اكس بوكس',p:[{l:'$10 Xbox',pr:11500},{l:'$25 Xbox',pr:27000},{l:'$50 Xbox',pr:51000}]},
+{n:'TikTok Coins',i:'🎵',d:'عملات تيك توك',p:[{l:'700 Coins',pr:8000},{l:'3500 Coins',pr:38000},{l:'7000 Coins',pr:72000}]},
+{n:'COD Mobile',i:'💣',d:'CP كول اوف ديوتي',p:[{l:'80 CP',pr:3000},{l:'400 CP',pr:12000},{l:'1000 CP',pr:26000}]},
+{n:'Mobile Legends',i:'⚔️',d:'دايموند',p:[{l:'86 💎',pr:3500},{l:'514 💎',pr:18000}]},
+{n:'EA FC 25',i:'⚽',d:'نقاط فيفا',p:[{l:'500 Points',pr:8000},{l:'2800 Points',pr:38000}]},
 ];
-const cats=[{id:'all',ar:'الكل',en:'All'},{id:'devices',ar:'أجهزة',en:'Devices'},{id:'games',ar:'ألعاب',en:'Games'},{id:'acc',ar:'إكسسوارات',en:'Acc'},{id:'subs',ar:'اشتراكات',en:'Subs'}];
-let lang='ar',active='all';
-function toggleLang(){lang=lang==='ar'?'en':'ar';document.documentElement.dir=lang==='ar'?'rtl':'ltr';document.querySelector('.lang').innerText=lang==='ar'?'EN':'AR';document.getElementById('h1').innerText=lang==='ar'?'متجر الألعاب رقم 1 في السودان والعالم':'No.1 Gaming Store Sudan & Worldwide';renderFilters();render()}
-function renderFilters(){const f=document.getElementById('filters');f.innerHTML='';cats.forEach(c=>{const b=document.createElement('button');b.className='chip'+(active===c.id?' active':'');b.innerText=lang==='ar'?c.ar:c.en;b.onclick=()=>{active=c.id;renderFilters();render()};f.appendChild(b)})}
-function render(){const q=document.getElementById('search').value.toLowerCase();const g=document.getElementById('store');g.innerHTML='';products.filter(p=>{const cat=active==='all'||p.cat===active;const nm=(lang==='ar'?p.name.ar:p.name.en).toLowerCase();return cat&&(!q||nm.includes(q))}).forEach(p=>{const nm=lang==='ar'?p.name.ar:p.name.en;const d=document.createElement('div');d.className='product';d.innerHTML=`<div class=thumb>${p.icon}</div><div class=info><h3>${nm}</h3><div class=meta>${p.stock}</div><div class=price>${p.price.toLocaleString()} SDG</div></div><button>${lang==='ar'?'التفاصيل':'Details'}</button>`;d.onclick=()=>openM(p);g.appendChild(d)})}
-function openM(p){const nm=lang==='ar'?p.name.ar:p.name.en;const ds=lang==='ar'?p.desc.ar:p.desc.en;document.getElementById('mTitle').innerText=nm;document.getElementById('mDesc').innerText=ds;document.getElementById('mPrice').innerText=p.price.toLocaleString()+' SDG';document.getElementById('mWa').href=`https://wa.me/249000000000?text=سلام عايز ${nm}`;document.getElementById('modal').classList.add('open')}
+let selG=null,selP=null;
+function render(){const g=document.getElementById('grid');g.innerHTML='';data.forEach(x=>{const e=document.createElement('div');e.className='g';e.innerHTML=`<div class=ico>${x.i}</div><div class=inf><h3>${x.n}</h3><p>${x.d}</p><p style=color:#2df6d3;font-weight:900;margin-top:4px>من ${x.p[0].pr} SDG</p></div>`;e.onclick=()=>openM(x);g.appendChild(e)})}
+function openM(x){selG=x;selP=x.p[0];document.getElementById('mt').innerText=x.i+' '+x.n;document.getElementById('md').innerText=x.d;const pc=document.getElementById('packs');pc.innerHTML='';x.p.forEach(o=>{const d=document.createElement('div');d.className='opt'+(o.l===selP.l?' active':'');d.innerHTML=`<span>${o.l}</span><b>${o.pr} SDG</b>`;d.onclick=()=>{selP=o;document.querySelectorAll('#packs.opt').forEach(q=>q.classList.remove('active'));d.classList.add('active');document.getElementById('bam').innerText='المبلغ: '+o.pr+' SDG - بنكك 2505206'};pc.appendChild(d)});document.getElementById('bam').innerText='المبلغ: '+selP.pr+' SDG - بنكك 2505206';document.getElementById('modal').classList.add('open')}
 function closeM(){document.getElementById('modal').classList.remove('open')}
-renderFilters();render();
+function send(){const pid=document.getElementById('pid').value;const w=document.getElementById('wnum').value;const msg=`طلب شحن جديد%0A🎮 ${selG.n}%0A📦 ${selP.l}%0A💰 ${selP.pr} SDG%0A🏦 حولت بنكك 2505206%0A🆔 ID: ${pid}%0A📱 ${w}`;window.open(`https://wa.me/249125048800?text=${msg}`,'_blank')}
+render();
 </script>
 </body>
 </html>
