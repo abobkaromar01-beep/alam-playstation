@@ -1,51 +1,89 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Alam TopUp - شحن فوري بنكك</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Alam TopUp - بنكك 2505206 بكري عمر</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;900&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@600;800;900&display=swap');
 :root{--bg:#060a1f;--card:#121937;--card2:#1a2350;--line:#24307a;--cyan:#2df6d3;--text:#eef2ff;--muted:#9aa3c7}
-*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Cairo',system-ui;background:var(--bg);color:var(--text)}
-.header{display:flex;justify-content:space-between;padding:14px 20px;background:rgba(6,10,31,.9);border-bottom:1px solid var(--line);position:sticky;top:0}
-.logo{font-weight:900;display:flex;gap:10px}.logo span{background:var(--cyan);color:#000;padding:6px 12px;border-radius:12px}
-.hero{max-width:1200px;margin:auto;padding:28px 20px;display:grid;grid-template-columns:1.1fr.9fr;gap:20px}
-.hero h1{font-size:34px;font-weight:900}.hero h1 b{color:var(--cyan)}
-.bank-box{background:#fff;color:#000;border-radius:16px;padding:14px;margin-top:12px;font-weight:800}
-.games{max-width:1200px;margin:auto;padding:20px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-@media(max-width:900px){.games{grid-template-columns:repeat(2,1fr)}.hero{grid-template-columns:1fr}}
-.game{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;cursor:pointer}
-.game.ic{height:110px;background:var(--card2);display:flex;align-items:center;justify-content:center;font-size:44px}
-.game.inf{padding:12px}.game h3{font-size:14px}
-.modal{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;padding:16px;z-index:99}.modal.open{display:flex}
-.box{background:var(--card);border:1px solid var(--cyan);border-radius:22px;max-width:460px;width:100%;padding:20px}
-.opt{display:flex;justify-content:space-between;background:#060a1f;border:1px solid #24307a;border-radius:12px;padding:12px;margin:8px 0;cursor:pointer}.opt.active{border-color:#2df6d3}
-input{width:100%;padding:14px;border-radius:12px;background:#060a1f;border:1px solid #24307a;color:#fff;margin:8px 0}
-.btn{width:100%;padding:14px;border-radius:12px;border:0;font-weight:900;cursor:pointer;background:#2df6d3;color:#000}
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--text)}
+.top{position:sticky;top:0;z-index:10;background:rgba(6,10,31,.95);border-bottom:1px solid var(--line);padding:12px 18px;display:flex;justify-content:space-between}
+.logo{font-weight:900;display:flex;gap:8px}.logo span{background:var(--cyan);color:#000;padding:6px 12px;border-radius:10px}
+.hero{max-width:1100px;margin:auto;padding:22px 16px;display:grid;grid-template-columns:1.2fr.8fr;gap:16px}
+@media(max-width:800px){.hero{grid-template-columns:1fr}}
+.card{background:linear-gradient(135deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:18px;padding:16px}
+.bank{background:#fff;color:#111;border-radius:14px;padding:12px;margin-top:10px;font-weight:900;line-height:1.4}
+.bank b{color:#c00}.grid{max-width:1100px;margin:auto;padding:16px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}}
+.g{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;cursor:pointer}
+.g:hover{border-color:var(--cyan);transform:translateY(-2px)}
+.g.ico{height:90px;background:var(--card2);display:flex;align-items:center;justify-content:center;font-size:42px}
+.g.inf{padding:10px}.g h3{font-size:13px}.g p{font-size:11px;color:var(--muted)}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;padding:14px;z-index:99}.modal.open{display:flex}
+.box{background:var(--card);border:1px solid var(--cyan);border-radius:20px;max-width:440px;width:100%;padding:18px}
+.opt{display:flex;justify-content:space-between;background:#070c26;border:1px solid var(--line);border-radius:10px;padding:10px;margin:7px 0;cursor:pointer;font-size:13px}.opt.active{border-color:var(--cyan);background:#16205a}
+input{width:100%;padding:12px;border-radius:10px;background:#070c26;border:1px solid var(--line);color:#fff;margin:6px 0}
+.btn{width:100%;padding:13px;border-radius:11px;border:0;font-weight:900;background:var(--cyan);color:#000;cursor:pointer;margin-top:8px}
 </style>
 </head>
 <body>
-<div class="header"><div class="logo"><span>ALAM</span> Alam TopUp ⚡</div><div style="font-size:12px;color:#9aa3c7">بنكك • فوري</div></div>
-<div class="hero"><div><h1>اشحن <b>أي لعبة</b> في 60 ثانية ببنكك</h1><div class="bank-box">🏦 بنكك: 1234567 - عالم البلايستيشن<br><small>اكتب في التعليق: شحن + اسم اللعبة</small></div></div><div style="background:#121937;border:1px solid #24307a;border-radius:20px;padding:16px"><h3>🔥 الأكثر طلباً</h3><div style="margin:12px 0"><div class="opt"><span>PUBG 660 UC</span><b>18,000</b></div><div class="opt"><span>Free Fire 1080 💎</span><b>16,500</b></div></div></div></div>
-<div class="games" id="games"></div>
-<div class="modal" id="modal" onclick="closeM()"><div class="box" onclick="event.stopPropagation()"><h2 id="mtitle"></h2><div id="packages"></div><label>🆔 ID اللاعب</label><input id="playerId" placeholder="5123456789"><label>📱 واتسابك</label><input id="waNum" placeholder="0912345678"><div class="bank-box" id="bankAmount">المبلغ: -</div><button class="btn" onclick="goWa()">تأكيد واتساب ✅</button><p style="text-align:center;color:#9aa3c7;margin-top:10px" onclick="closeM()">إغلاق</p></div></div>
+<div class="top"><div class="logo"><span>ALAM</span> TopUp</div><div style="font-size:11px;color:var(--muted)">بنكك • فوري 24/7</div></div>
+<div class="hero">
+<div>
+<h1 style="font-size:28px;font-weight:900">اشحن <span style="color:#2df6d3">أي لعبة</span> ببنكك في 60 ثانية ⚡</h1>
+<p style="color:#9aa3c7;font-size:13px;margin:10px 0">PUBG • Free Fire • PSN • Xbox • TikTok - دفع بنكك مباشر</p>
+<div class="card">
+<strong>🏦 حساب بنكك الرسمي:</strong>
+<div class="bank">2505206 - بكري عمر<br>عالم البلايستيشن<br><small>في التعليق اكتب: شحن + اسم اللعبة</small><br><b>⚠️ بعد التحويل صور الإشعار</b></div>
+</div>
+</div>
+<div class="card">
+<h3>🔥 الأكثر طلباً اليوم</h3>
+<div style="margin-top:10px">
+<div class="opt active"><span>PUBG 660 UC</span><b>18,000 SDG</b></div>
+<div class="opt active"><span>Free Fire 1080 💎</span><b>16,500 SDG</b></div>
+<div class="opt active"><span>PSN $20</span><b>22,000 SDG</b></div>
+</div>
+<a href="https://wa.me/249125048800" style="display:block;text-align:center;margin-top:10px;color:#2df6d3;font-size:12px;text-decoration:none">استفسار واتساب: 0125048800</a>
+</div>
+</div>
+<div class="grid" id="grid"></div>
+<div class="modal" id="modal"><div class="box">
+<h3 id="mt"></h3><p id="md" style="color:#9aa3c7;font-size:12px;margin:6px 0"></p>
+<div id="packs"></div>
+<label style="font-size:12px">🆔 ID اللاعب / الإيميل</label>
+<input id="pid" placeholder="مثال 5123456789">
+<label style="font-size:12px">📱 واتسابك للتواصل</label>
+<input id="wnum" placeholder="0912345678">
+<div class="bank" id="bam">المبلغ: -</div>
+<button class="btn" onclick="send()">تأكيد الطلب - واتساب ✅</button>
+<p onclick="closeM()" style="text-align:center;color:#9aa3c7;font-size:12px;margin-top:10px;cursor:pointer">إغلاق</p>
+</div></div>
 <script>
-const gamesData=[
-{ name:'PUBG Mobile', icon:'🎯', packs:[{label:'60 UC',price:2500},{label:'325 UC',price:9500},{label:'660 UC',price:18000},{label:'1800 UC',price:45000}] },
-{ name:'Free Fire', icon:'🔥', packs:[{label:'100 💎',price:2500},{label:'310 💎',price:6500},{label:'1080 💎',price:16500},{label:'2200 💎',price:32000}] },
-{ name:'PSN Cards', icon:'⭐', packs:[{label:'$10 PSN',price:12000},{label:'$20 PSN',price:22000},{label:'$50 PSN',price:52000}] },
-{ name:'Xbox', icon:'🟩', packs:[{label:'$10 Xbox',price:11500},{label:'$25 Xbox',price:27000}] },
-{ name:'TikTok', icon:'🎵', packs:[{label:'700 Coins',price:8000},{label:'3500 Coins',price:38000}] },
-{ name:'COD', icon:'💣', packs:[{label:'80 CP',price:3000},{label:'400 CP',price:12000},{label:'1000 CP',price:26000}] },
-{ name:'Mobile Legends', icon:'⚔️', packs:[{label:'86 💎',price:3500},{label:'514 💎',price:18000}] },
-{ name:'FC 25', icon:'⚽', packs:[{label:'500 Points',price:8000},{label:'2800 Points',price:38000}] },
+const data=[
+{n:'PUBG Mobile',i:'🎯',d:'شدات PUBG - تسليم ID',p:[{l:'60 UC',pr:2500},{l:'325 UC',pr:9500},{l:'660 UC',pr:18000},{l:'1800 UC',pr:45000}]},
+{n:'Free Fire',i:'🔥',d:'جواهر فري فاير',p:[{l:'100 💎',pr:2500},{l:'310 💎',pr:6500},{l:'1080 💎',pr:16500},{l:'2200 💎',pr:32000}]},
+{n:'PSN Cards',i:'⭐',d:'بطاقات بلايستيشن',p:[{l:'$10 PSN',pr:12000},{l:'$20 PSN',pr:22000},{l:'$50 PSN',pr:52000},{l:'$100 PSN',pr:98000}]},
+{n:'Xbox Gift',i:'🟩',d:'بطاقات اكس بوكس',p:[{l:'$10 Xbox',pr:11500},{l:'$25 Xbox',pr:27000},{l:'$50 Xbox',pr:51000}]},
+{n:'TikTok Coins',i:'🎵',d:'عملات تيك توك',p:[{l:'700 Coins',pr:8000},{l:'3500 Coins',pr:38000},{l:'7000 Coins',pr:72000}]},
+{n:'COD Mobile',i:'💣',d:'CP كول اوف ديوتي',p:[{l:'80 CP',pr:3000},{l:'400 CP',pr:12000},{l:'1000 CP',pr:26000}]},
+{n:'Mobile Legends',i:'⚔️',d:'دايموند',p:[{l:'86 💎',pr:3500},{l:'172 💎',pr:6500},{l:'514 💎',pr:18000}]},
+{n:'EA FC 25',i:'⚽',d:'نقاط فيفا',p:[{l:'500 Points',pr:8000},{l:'1050 Points',pr:15000},{l:'2800 Points',pr:38000}]},
 ];
-let selectedGame=null,selectedPack=null;
-function renderGames(){const g=document.getElementById('games');g.innerHTML='';gamesData.forEach(gd=>{const el=document.createElement('div');el.className='game';el.innerHTML=`<div class=ic>${gd.icon}</div><div class=inf><h3>${gd.name}</h3><p style="color:#2df6d3;font-weight:900">من ${gd.packs[0].price} SDG</p></div>`;el.onclick=()=>openM(gd);g.appendChild(el)})}
-function openM(gd){selectedGame=gd;selectedPack=gd.packs[0];document.getElementById('mtitle').innerText=gd.icon+' '+gd.name;const pc=document.getElementById('packages');pc.innerHTML='';gd.packs.forEach(p=>{const d=document.createElement('div');d.className='opt'+(selectedPack.label===p.label?' active':'');d.innerHTML=`<span>${p.label}</span><b>${p.price} SDG</b>`;d.onclick=()=>{selectedPack=p;document.querySelectorAll('.opt').forEach(o=>o.classList.remove('active'));d.classList.add('active');document.getElementById('bankAmount').innerText='المبلغ: '+p.price+' SDG - بنكك 1234567'};pc.appendChild(d)});document.getElementById('bankAmount').innerText='المبلغ: '+selectedPack.price+' SDG';document.getElementById('modal').classList.add('open')}
+let selG=null,selP=null;
+function render(){const g=document.getElementById('grid');g.innerHTML='';data.forEach(x=>{const e=document.createElement('div');e.className='g';e.innerHTML=`<div class="ico">${x.i}</div><div class="inf"><h3>${x.n}</h3><p>${x.d}</p><p style="color:#2df6d3;font-weight:900;margin-top:4px">من ${x.p[0].pr} SDG</p></div>`;e.onclick=()=>openM(x);g.appendChild(e)})}
+function openM(x){selG=x;selP=x.p[0];document.getElementById('mt').innerText=x.i+' '+x.n;document.getElementById('md').innerText=x.d;const pc=document.getElementById('packs');pc.innerHTML='';x.p.forEach(o=>{const d=document.createElement('div');d.className='opt'+(o.l===selP.l?' active':'');d.innerHTML=`<span>${o.l}</span><b>${o.pr} SDG</b>`;d.onclick=()=>{selP=o;document.querySelectorAll('#packs.opt').forEach(q=>q.classList.remove('active'));d.classList.add('active');document.getElementById('bam').innerText='المبلغ: '+o.pr+' SDG - حول بنكك 2505206 بكري عمر'};pc.appendChild(d)});document.getElementById('bam').innerText='المبلغ: '+selP.pr+' SDG - حول بنكك 2505206';document.getElementById('modal').classList.add('open')}
 function closeM(){document.getElementById('modal').classList.remove('open')}
-function goWa(){const pid=document.getElementById('playerId').value;const msg=`طلب شحن:%0A🎮 ${selectedGame.name}%0A📦 ${selectedPack.label}%0A💰 ${selectedPack.price} SDG%0A🆔 ${pid}`;window.open(`https://wa.me/249000000000?text=${msg}`,'_blank')}
-renderGames();
+function send(){
+const pid=document.getElementById('pid').value.trim();
+const w=document.getElementById('wnum').value.trim();
+if(pid.length<3){alert('⚠️ اكتب ID اللعبة صحيح');return}
+if(w.length<9){alert('⚠️ اكتب رقم واتسابك كامل');return}
+const msg=`*طلب شحن جديد - عالم البلايستيشن*%0A%0A🎮 اللعبة: ${selG.n}%0A📦 الباقة: ${selP.l}%0A💰 المبلغ: ${selP.pr} SDG%0A%0A🏦 *تم التحويل إلى:*%0A2505206 - بكري عمر%0A%0A🆔 ID اللاعب: ${pid}%0A📱 واتساب الزبون: ${w}%0A%0A✅ سأرسل إشعار بنكك الآن`;
+window.open(`https://wa.me/249125048800?text=${msg}`,'_blank')}
+render();
+document.getElementById('modal').addEventListener('click',e=>{if(e.target.id==='modal')closeM()});
 </script>
 </body>
 </html>
